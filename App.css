@@ -1,0 +1,74 @@
+h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background:tomato;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  color: aliceblue;
+  position: relative;
+  font-size: 5rem;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+  background-image: url("42968.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  backdrop-filter: blur(2px);
+  overflow-x: hidden;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+div.header{
+/*	background-color:rgba(129, 205, 224, 0.89);*/
+	width:25%;
+  top: 10px;
+  left:1160px;
+	height:7%;
+  color: black;
+  position: absolute;
+}
+nav a{
+  color: white;
+}
+nav a:hover{
+  background-color: tomato;
+}
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
